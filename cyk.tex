@@ -8,6 +8,10 @@
 \usepackage{epstopdf}
 \usepackage{subfig}
 \usepackage{array, multirow}
+
+	
+
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
 \usepackage{booktabs}
 \usepackage[a4paper]{geometry}
 
@@ -54,8 +58,8 @@ CParens $\rightarrow $ )\\
 4 && & & \\\cline{2-6}
 3 && & & & \\\cline{2-7}
 2 && & & & & \\\cline{2-8}
-1 & Exp & Op & OParens & Exp & Op & Exp & CPar \\\cline{2-8}
-& num & * & ( & num & + & num & ) \\\cline{2-8}
+1 & \cellcolor{blue!25}Exp & Op & OParens & Exp & Op & Exp & CParens \\\cline{2-8}
+& \cellcolor{blue!25}num & * & ( & num & + & num & ) \\\cline{2-8}
 \cline {2-8}
 
 \end{tabular}
@@ -71,8 +75,8 @@ CParens $\rightarrow $ )\\
 5 && & \\\cline{2-5}
 4 && & & \\\cline{2-6}
 3 && & & & \\\cline{2-7}
-2 & & & &  & OpExp & ExpClose \\\cline{2-8}
-1 & Exp & Op & OParens & Exp & Op & Exp & CPar \\\cline{2-8}
+2 & & & &  & \cellcolor{blue!25} OpExp & ExpClose \\\cline{2-8}
+1 & Exp & Op & OParens & Exp & \cellcolor{blue!25}Op & \cellcolor{blue!25}Exp & CParens \\\cline{2-8}
 & num & * & ( & num & + & num & ) \\\cline{2-8}
 \cline {2-8}
 
@@ -86,9 +90,9 @@ CParens $\rightarrow $ )\\
 6 && \\\cline{2-4}
 5 && & \\\cline{2-5}
 4 && & & \\\cline{2-6}
-3 && & & Exp & \\\cline{2-7}
-2 & & & &  & OpExp & ExpClose \\\cline{2-8}
-1 & Exp & Op & OParens & Exp & Op & Exp & CPar \\\cline{2-8}
+3 && & & \cellcolor{blue!25}Exp & \\\cline{2-7}
+2 & & & &  & \cellcolor{blue!25}OpExp & ExpClose \\\cline{2-8}
+1 & Exp & Op & OParens & \cellcolor{blue!25}Exp & Op & Exp & CParens \\\cline{2-8}
 & num & * & ( & num & + & num & ) \\\cline{2-8}
 \cline {2-8}
 
@@ -101,10 +105,10 @@ CParens $\rightarrow $ )\\
 7 &\\\cline{2-3}
 6 && \\\cline{2-4}
 5 && & \\\cline{2-5}
-4 && & & ExpClose \\\cline{2-6}
+4 && & & \cellcolor{blue!25}ExpClose \\\cline{2-6}
 3 && & & Exp & \\\cline{2-7}
 2 & & & &  & OpExp & ExpClose \\\cline{2-8}
-1 & Exp & Op & OParens & Exp & Op & Exp & CPar \\\cline{2-8}
+1 & Exp & Op & OParens & Exp & Op & Exp & CParens \\\cline{2-8}
 & num & * & ( & num & + & num & ) \\\cline{2-8}
 \cline {2-8}
 
@@ -120,7 +124,7 @@ CParens $\rightarrow $ )\\
 4 && & & ExpClose \\\cline{2-6}
 3 && & & Exp & \\\cline{2-7}
 2 & & & &  & OpExp & ExpClose \\\cline{2-8}
-1 & Exp & Op & OParens & Exp & Op & Exp & CPar \\\cline{2-8}
+1 & Exp & Op & OParens & Exp & Op & Exp & CParens \\\cline{2-8}
 & num & * & ( & num & + & num & ) \\\cline{2-8}
 \cline {2-8}
 
@@ -136,7 +140,7 @@ CParens $\rightarrow $ )\\
 4 && & & ExpClose \\\cline{2-6}
 3 && & & Exp & \\\cline{2-7}
 2 & & & &  & OpExp & ExpClose \\\cline{2-8}
-1 & Exp & Op & OParens & Exp & Op & Exp & CPar \\\cline{2-8}
+1 & Exp & Op & OParens & Exp & Op & Exp & CParens \\\cline{2-8}
 & num & * & ( & num & + & num & ) \\\cline{2-8}
 \cline {2-8}
 
@@ -152,8 +156,28 @@ CParens $\rightarrow $ )\\
 4 && & & ExpClose \\\cline{2-6}
 3 && & & Exp & \\\cline{2-7}
 2 & & & &  & OpExp & ExpClose \\\cline{2-8}
-1 & Exp & Op & OParens & Exp & Op & Exp & CPar \\\cline{2-8}
+1 & Exp & Op & OParens & Exp & Op & Exp & CParens \\\cline{2-8}
 & num & * & ( & num & + & num & ) \\\cline{2-8}
+\cline {2-8}
+\end{tabular}
+
+
+\vspace{0.5in}
+
+%----------------------------------------------------------------
+
+
+
+\begin{tabular}{r | c | c | c | c  | c | c | c|}
+\cline{2-2}
+7 &\\\cline{2-3}
+6 && \\\cline{2-4}
+5 && & \\\cline{2-5}
+4 && & & \\\cline{2-6}
+3 && & & & \\\cline{2-7}
+2 & & & & & & \\\cline{2-8}
+1 & Exp & Op & Exp & Op & Exp & CParens & OParens \\\cline{2-8}
+& num & + & num & * & num & ) & ( \\\cline{2-8}
 \cline {2-8}
 
 \end{tabular}
@@ -164,228 +188,16 @@ CParens $\rightarrow $ )\\
 \cline{2-2}
 7 &\\\cline{2-3}
 6 && \\\cline{2-4}
-5 && & \\\cline{2-5}
-4 && & & \\\cline{2-6}
-3 && & & & \\\cline{2-7}
-2 && & & & & \\\cline{2-8}
-1 & & & & & & & \\\cline{2-8}
-& num & * & ( & num & + & num & ) \\\cline{2-8}
+5 & Exp & & \\\cline{2-5}
+4 & Exp & OpExp & ExpClose & \\\cline{2-6}
+3 & Exp & & Exp & & \\\cline{2-7}
+2 & & OpExp & & OpExp & & \\\cline{2-8}
+1 & Exp & Op & Exp & Op & Exp & CParens & OParens \\\cline{2-8}
+& num & + & num & * & num & ) & ( \\\cline{2-8}
 \cline {2-8}
 
 \end{tabular}
 
 \vspace{0.5in}
-\begin{tabular}{ | c | c | c | c  | c | c | c|}
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
- & & \\\cline{1-4}
- & & & \\\cline{1-5}
- & & & & \\\cline{1-6}
- & & & & & \\\cline{1-7}
- Exp & Op &OParens & Exp & Op & Exp & CParens \\\cline{1-7}
-\hline num & * & ( & num & + & num & ) \\
-\hline
-
-\end{tabular}
-
-\vspace{0.5in}
-
-\begin{tabular}{ r | c | c | c | c  | c | c | c|}
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
- & & \\\cline{1-4}
- & & & \\\cline{1-5}
- & & & & \\\cline{1-6}
- & & & & OpExp & ExpClose  \\\cline{1-7}
- Exp & Op & OParens & Exp & Op & Exp & CParens \\\cline{1-7}
-\hline num & * & ( & num & + & num & ) \\
-\hline
-
-\end{tabular}
-
-\vspace{0.5in}
-
-\begin{tabular}{ | c | c | c | c  | c |}
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
- &  &  \\\cline{1-4}
- &  &  &  \\\cline{1-5}
- Exp & Op & Exp & Op& Exp \\
-\hline Num & * & Num & + & Num  \\
-\hline
-
-\end{tabular}
-
-\vspace{0.5in}
-
-
-\begin{tabular}{ | c | c | c | c  | c |}
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
- &  &  \\\cline{1-4}
- & OpExp &  & OpExp \\\cline{1-5}
- Exp & Op & Exp & Op& Exp \\
-\hline Num & * & Num & + & Num  \\
-\hline
-
-\end{tabular}
-
-\vspace{0.5in}
-
-\begin{tabular}{ | c | c | c | c  | c |}
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
-Exp &  & Exp \\\cline{1-4}
- & OpExp &  & OpExp \\\cline{1-5}
- Exp & Op & Exp & Op& Exp \\
-\hline Num & * & Num & + & Num  \\
-\hline
-
-\end{tabular}
-
-\vspace{0.5in}
-
-\begin{tabular}{ | c | c | c | c  | c |}
-\cline{1-1}
-\\\cline{1-2}
- & OpExp\\\cline{1-3}
-Exp &  & Exp \\\cline{1-4}
- & OpExp &  & OpExp \\\cline{1-5}
- Exp & Op & Exp & Op& Exp \\
-\hline Num & * & Num & + & Num  \\
-\hline
-
-\end{tabular}
-\vspace{0.5in}
-
-\begin{tabular}{ | c | c | c | c  | c |}
-\cline{1-1}
-Exp\\\cline{1-2}
- & OpExp\\\cline{1-3}
-Exp &  & Exp \\\cline{1-4}
- & OpExp &  & OpExp \\\cline{1-5}
- Exp & Op & Exp & Op& Exp \\
-\hline Num & * & Num & + & Num  \\
-\hline
-
-\end{tabular}
-\vspace{0.5in}
-
-
-\begin{tabular}{ | c | c | c | c  | c |}
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
- &  &  \\\cline{1-4}
- &  &  &  \\\cline{1-5}
- & & & & \\
-\hline Num & * & Num & + & Num  \\
-\hline
-
-\end{tabular}
-
-\vspace{0.5in}
-
-\begin{tabular}{ | c | c | c | c  | }
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
- &  &  \\\cline{1-4}
- &  &  &  \\
-\hline 1 & 1 & 0 & 0  \\
-\hline
-
-\end{tabular}
-
-\vspace{0.5in}
-
-\begin{tabular}{ | c | c | c | c  | }
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
- &  &  \\\cline{1-4}
- &  &  &  \\
-\hline 1 & 1 & 0 & 0  \\
-\hline
-
-\end{tabular}
-
-\vspace{0.5in}
-
-\begin{tabular}{ | c | c | c | c  | }
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
- &  &  \\\cline{1-4}
- &  &  &  \\
-\hline 1 & 1 & 0 & 0  \\
-\hline
-
-\end{tabular}
-
-\vspace{0.5in}
-
-
-%--------------------------------------------------------------%
-
-
-
-\begin{tabular}{ | c | c | c | c  | }
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
- &  &  \\\cline{1-4}
- &  &  &  \\
-\hline 1 & 0 & 0 & 1  \\
-\hline
-
-\end{tabular}
-\vspace{0.5in}
-
-\begin{tabular}{ | c | c | c | c  | }
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
- &  &  \\\cline{1-4}
- &  &  &  \\
-\hline 1 & 0 & 0 & 1  \\
-\hline
-
-\end{tabular}
-\vspace{0.5in}
-
-\begin{tabular}{ | c | c | c | c  | }
-\cline{1-1}
-\\\cline{1-2}
- & \\\cline{1-3}
- &  &  \\\cline{1-4}
- &  &  &  \\
-\hline 1 & 0 & 0 & 1  \\
-\hline
-
-\end{tabular}
-\vspace{0.5in}
-
-
-\vspace{0.5in}
-
-\begin{tabular}{ | c | c | c | c  | }
-\cmidrule{1-1}
-\\\cmidrule{1-2}
- &  \\\cmidrule{1-3}
- &  &  \\\cmidrule{1-4}
- &  &  &  \\\cmidrule{1-4}
- 1 & 0 & 0 & 1  \\
-\hline
-
-\end{tabular}
-\vspace{0.5in}
-
-
 
 \end{document}
